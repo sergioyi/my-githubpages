@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+}
+body{
+  background-color: var(--bg-primaary);
+  color: black;
+  /*max-width: 1280px;*/
+}
+body.modo-escuro{
+  background-color: #212121;
+  color: #f5f5f5;
+}
+ img {
+  height: 30px;
+  width: 30px;
+ }
+header{/*cabeçalho só tem dois objetos*/
+  display: flex;
+  justify-content: space-between;/*espaço entre os elementos*/
+  padding: 25px;/*distancia da borda*/
+
+
+}
+header .planeta,/*qunado vc dá um espaço assim, é pq vc quer essa tag dentro dessa parte. se for sem o header só .planeta todos que tenham esse msm nome de classe iria junto dmaer estolizado*/
+header .ecuro{
+  width:30px;
+  transition:0.2s ease-in-out;/*transição mais suave*/
+}
+header #botao-escuro{
+  background: none;/*para os botões que são botões custumam ter uma borda horivel, isso aqui tira a cor e o de baixo tirra ele.
+  lembrnado que isso de id se refere a botão e não a imagem nele*/
+  border: none;
+  cursor: pointer;
+}
+
+header .planeta:hover,/*hover sognifica qunado vc passa o mouse por cima*/
+header .escuro:hover,
+main .cartao-das-gens:hover/*fazer com que as cartas tbm possam crecer na mesma medida que essas duas*/
+{
+  transform: scale(1.05);/*o qunado a imgm vai se aumentar*/
+  cursor: pointer;
+}
+
+main{
+  /*background-color: antiquewhite;/*isso aqui é só para vc saber onde está o main no site em si*/
+  padding:25px;/*distância da borda da tela*/
+}
+main .container-cards{/*todas as cartas em geral*/
+  display: flex;/*aqui serve para vc torna os itens disponiveis para flexibilidade da tela*/
+  flex-wrap: wrap;/*quando não tiver mais espaço na tela descer ks itens*/
+  gap: 30px;/*espaçamento nos cartões*/
+  justify-content: center;/*centra lizar as cartas*/
+}
+main .cartao-das-gens{
+  background-color: #d8e3ec;/*cor do cartão*/
+  width: 200px;/*largura da carta*/
+  padding: 15px;/*distância das bordas*/
+  display: flex;
+  flex-direction:column;/*tirar os itens que rram expremidps um do lado do outro, e passa ser colocado em coluna dentro da carta*/
+  align-items: center;/*arumaar os itens no centro da carta*/
+  gap: 15px;/*espaçamento entre elementos dentro do cartão*/
+  border-radius: 15px;/*borda arredondado*/
+  transition: 0.2s ease-in-out;/*efeitos que vai durar 0.2s sendo bem suave a transição, mas sozinha não faz nada, precissa de uma extensão que faça algo*/
+}
+main .cartao-das-gens:hover{/*essa extensão de quando vc passa o mouse por cima*/
+  background-color: #96d9d6;
+}
+.modo-escuro .cartao-das-gens{
+  background-color: #a8a8a8;
+  /*aqui é para vc poder comecar a colocar os botões/cartas de outra cor para o modo escuro. e para isso vc tem quw mudar o bodybdo html para para essa classe modo-escuro*/
+}
+main .cartao-das-gens .informacao{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333333;/*crosura da borda*/
+  border-radius: 10px;/*arredondado as borads*/
+}
+main .cartao-das-gens .informacao span{
+ /* background-color: aqua;/*aqui é para arrumar o nomezimho com numeros de cada cartão*/
+  padding:5px;
+text-transform: uppercase;/*aqui é para deixar todos os caracteres grandes*/
+  font-size: 17px;
+
+}
+main .cartao-das-gens .gif{/*aqui é para os gif's que estão muito grande*/
+  width: 90px;
+  height: 90px;
+  background-color: gray;
+}
+main .cartao-das-gens .tipos{/*aqui é para mexer nos tipos/conjunto de adjetivos delas*/
+  /*background-color: white;*/
+  display: flex;
+  gap: 15px;
+}
+main .cartao-das-gens .tipo{/*aqui os adjetivos*/
+  padding: 8px;
+  border-radius: 10px;
+}
+ .serva{
+  background-color: #7ac74c;
+}
+ .gemfria{
+   background-color: #df67ddfb;
+ }
+.gemquente{
+  background-color: #ee8130;
+}
+main .descricao{
+  max-height: 80px; /*altura maxima*/
+  overflow-y: scroll;/*aqui desenrola o scroll para eixo y/esconde dentro do elemento*/
+  font-size: 14px;
+  padding-right: 10px;
+}

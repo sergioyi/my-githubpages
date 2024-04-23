@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+}
+body{
+  background: var(--bg-primaary);
+}
+#div_img {
+  background-color: #3c3a3a;
+  float: left;
+  height: 100vh;
+  border-right: solid 0.25px #b4acac;
+}
+#meu_perfil{
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#minha_intro{
+  text-align: center;
+  position: fixed;
+  min-top: 100px;
+  width: 700px;
+  height: 400px;
+  font-size: 24px;
+  color: var(--text-primary);
+  padding: 1.5rem;
+  backdrop-filter: blur(35px);
+  animation: slide-in 2s ease-in-out;
+  animation-fill-mode: forwards;
+  transition: 0.2s ease-in-out;
+}
+@keyframes slide-in{
+  from{
+    margin-left: 150vw;
+    overflow: hidden;
+  }
+  to{
+    margin-left: 0;
+  }
+}
+#troca_tela2{
+  position: fixed;
+  top: 90vh;
+  left: 1%;
+  display: flex;
+}
+#troca_tela {
+  position: fixed;
+  top: 90vh;
+  left: 88%;
+}
+#troca_tela a,
+#troca_tela2 a{
+  color: var(--text-primary);
+}
+#body-div{  
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*background-color: #5e5c64;*/
+}
+.meusprojeos{
+  heiht: 300px;
+  width: 300px;
+  boder-radius: 10px;
+  background-color: red;
+}
+@media (max-width: 952px){
+  #div_img {
+    float: none;
+    height: 19.85vh;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 0.05px  #b4acac;
+    border-right: transparent;
+  }
+  #body-div{  
+    display: flex;
+    justify-content: none;
+    
+    height: 80vh;
+    
+  }
+  #meu_perfil{
+    width: 100px;
+    height: 100px;
+  }
+
+  #minha_intro{
+    width: 80vw;
+    font-size: 16px;
+    animation-fill-mode: forwards;
+    transition: 0.2s ease-in-out;
+    min-margin-top: 100px;
+  }
+  @keyframes slide-in{
+    from{
+      margin-left: 1290px;
+      overflow: hidden;
+    }
+    to{
+      margin-left: 0;
+    }
+  }
+}
+@media (min-width: 768px){
+  #troca_tela {
+    position: fixed;
+    top: 90vh;
+    left: 90%;
+  }
+  #troca_tela2{
+    position: fixed;
+    top: 90vh;
+    left: 10%;
+    display: flex;
+  }
+}
